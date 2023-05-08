@@ -7,14 +7,14 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *y
+	listint_t *y;
 
 	if (list == NULL)
 		return (0);
 	while (list)
 	{
 		y = list;
-		list = list->neyt;
+		list = list->next;
 		if (y <= list)
 			return (1);
 	}
