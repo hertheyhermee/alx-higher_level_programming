@@ -4,7 +4,10 @@ if __name__ == "__main__":
     l = len(sys.argv) - 1
     print("{} arguement".format(l), end="")
     if l == 0:
-        print("s.")
+        print(".")
+    elif l == 1:
+        print(":")
+        print("{}: {}".format(l, sys.argv[l]))
     else:
         if l > 1:
             print("s", end="")
