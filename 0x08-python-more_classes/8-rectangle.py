@@ -7,11 +7,11 @@ class Rectangle:
 
     Attributes:
         instances: Number of Rectangle instances.
-        symbol_printing: Symbol used for string representation.
+        symbol_print: Symbol used for string representation.
     """
 
     instances = 0
-    symbol_printing = "#"
+    symbol_print = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize new Rectangle.
@@ -68,7 +68,7 @@ class Rectangle:
             rectangle_1 (Rectangle): The first Rectangle.
             rectangle_2 (Rectangle): The second Rectangle.
         Raises:
-            TypeError: If either of rectangle_1 or rectangle_2 is not a Rectangle.
+            TypeError: If either of the rectangles is not a Rectangle.
         """
         if not isinstance(rectangle_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -88,7 +88,7 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append(str(self.symbol_printing)) for j in range(self.__width)]
+            [rect.append(str(self.symbol_print)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
