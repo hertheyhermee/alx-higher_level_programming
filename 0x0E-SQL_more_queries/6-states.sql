@@ -1,5 +1,7 @@
 -- Creates the table unique_id
-CREATE TABLE IF NOT EXISTS `unique_id` (
-    `id`   INT          DEFAULT 1 UNIQUE,
-    `name` VARCHAR(256)
-);
+-- creates a database
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+-- use a database
+USE hbtn_0d_usa;
+-- creates a table
+CREATE TABLE IF NOT EXISTS states (id INT UNIQUE NOT NULL AUTO_INCREMENT, name VARCHAR(256) NOT NULL, PRIMARY KEY(id));
